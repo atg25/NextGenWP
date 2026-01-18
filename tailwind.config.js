@@ -8,6 +8,10 @@ export default {
         charcoal: '#2a2a2a',
         accent: '#2d5450', // deep green
       },
+      fontFamily: {
+        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
     },
   },
   plugins: [],
