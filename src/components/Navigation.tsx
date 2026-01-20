@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import Logo from './Logo';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,8 +43,13 @@ export default function Navigation() {
   ) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    
+    if (href === '#') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const element = document.querySelector(href);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -60,9 +66,9 @@ export default function Navigation() {
             <a
               href="#"
               onClick={e => handleClick(e, '#')}
-              className="font-serif text-xl font-light tracking-tight text-charcoal transition-colors hover:text-accent"
+              className="transition-opacity hover:opacity-80"
             >
-              NewGen <span className="italic">Wallcovering</span>
+              <Logo variant="light" size="md" />
             </a>
 
             {/* Desktop Nav */}

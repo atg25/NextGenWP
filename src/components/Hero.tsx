@@ -54,6 +54,10 @@ export default function Hero() {
           >
             <a
               href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="group relative inline-flex items-center gap-2 overflow-hidden bg-accent px-10 py-4 text-sm font-medium uppercase tracking-wider text-warm-white transition-all duration-300 hover:gap-4"
             >
               <span>Request Quote</span>
@@ -74,25 +78,16 @@ export default function Hero() {
 
             <a
               href="#work"
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector('#work')?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="text-sm uppercase tracking-wider text-charcoal/60 transition-colors hover:text-accent"
             >
               View Work
             </a>
           </motion.div>
         </div>
-
-        {/* Scroll Indicator - Only on mobile/left side */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.8 }}
-          className="absolute bottom-12 left-8 flex items-center gap-3 lg:hidden"
-        >
-          <div className="h-16 w-[1px] bg-charcoal/20" />
-          <span className="text-xs uppercase tracking-wider text-charcoal/40">
-            Scroll
-          </span>
-        </motion.div>
       </div>
 
       {/* Right Image Grid Section */}

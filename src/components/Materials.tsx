@@ -139,6 +139,10 @@ export default function Materials() {
           </p>
           <a
             href="#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+            }}
             className="inline-block text-sm uppercase tracking-wider text-accent transition-colors hover:text-charcoal"
           >
             Let's Discuss →

@@ -113,6 +113,10 @@ export default function SelectedWork() {
         >
           <a
             href="#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+            }}
             className="inline-block text-sm uppercase tracking-wider text-charcoal/60 transition-colors hover:text-accent"
           >
             Discuss Your Project →
