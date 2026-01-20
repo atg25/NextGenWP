@@ -25,7 +25,7 @@ export default function About() {
             About
           </div>
           <h2 className="font-serif text-5xl font-light leading-tight tracking-tight text-charcoal md:text-6xl">
-            NextGen Wallpaper
+            NewGen Wallcovering
           </h2>
         </motion.div>
 
@@ -41,7 +41,7 @@ export default function About() {
           className="space-y-8 text-lg leading-relaxed text-charcoal/80"
         >
           <p>
-            NextGen Wallpaper began with a simple belief: that wallpaper
+            NewGen Wallcovering began with a simple belief: that wallpaper
             installation is a craft requiring precision, patience, and respect
             for materials.
           </p>

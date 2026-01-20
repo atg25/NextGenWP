@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   const wallpaperImages = [
-    '/wallpapers/sample-1.jpg',
-    '/wallpapers/sample-2.jpg',
-    '/wallpapers/sample-3.jpg',
-    '/wallpapers/sample-4.jpg',
+    '/wallpapers/0A974DC4-D203-4F61-8FB9-AC9DBB889DDE_1_102_o.jpeg',
+    '/wallpapers/3961CB94-3CDC-452E-9E8F-E1E9608E8481_1_102_o.jpeg',
+    '/wallpapers/5250FD5B-A2B3-449D-88DD-09ABEA0CCF64_1_102_o.jpeg',
+    '/wallpapers/C8BD5D6A-9575-4066-B893-0AD0D3EEE5A3_1_102_o.jpeg',
   ];
 
   return (
@@ -22,7 +22,7 @@ export default function Hero() {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="mb-6 inline-block border-l-2 border-accent pl-4 text-sm uppercase tracking-widest text-accent"
           >
-            Next Gen Wallpaper
+            New Gen Wallcovering
           </motion.div>
 
           <motion.h1
@@ -112,6 +112,7 @@ export default function Hero() {
             <img
               src={image}
               alt={`Wallpaper texture ${index + 1}`}
+              loading="lazy"
               className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
             {/* Overlay on hover */}

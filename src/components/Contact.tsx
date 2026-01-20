@@ -15,7 +15,9 @@ export default function Contact() {
     message: '',
   });
 
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [status, setStatus] = useState<
+    'idle' | 'submitting' | 'success' | 'error'
+  >('idle');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,7 +29,7 @@ export default function Contact() {
       console.log('Form submitted:', formData);
       setStatus('success');
       setFormData({ name: '', email: '', phone: '', message: '' });
-      
+
       // Reset success message after 5 seconds
       setTimeout(() => setStatus('idle'), 5000);
     }, 1000);
@@ -212,7 +214,10 @@ export default function Contact() {
         }}
         className="mx-auto mt-24 max-w-4xl border-t border-charcoal/10 pt-12 text-center text-sm text-charcoal/50"
       >
-        <p>© {new Date().getFullYear()} NextGen Wallpaper. Precision installation for modern homes.</p>
+        <p>
+          © {new Date().getFullYear()} NewGen Wallcovering. Precision
+          installation for modern homes.
+        </p>
       </motion.div>
     </section>
   );
