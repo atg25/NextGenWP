@@ -66,9 +66,9 @@ export default function Navigation() {
             <a
               href="#"
               onClick={e => handleClick(e, '#')}
-              className="transition-opacity hover:opacity-80"
+              className="block"
             >
-              <Logo variant="light" size="md" />
+              <Logo variant="small" className="h-8 w-auto md:h-10" />
             </a>
 
             {/* Desktop Nav */}
