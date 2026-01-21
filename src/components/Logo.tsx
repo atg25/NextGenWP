@@ -4,8 +4,8 @@ interface LogoProps {
 }
 
 export default function Logo({ variant = 'small', className = '' }: LogoProps) {
-  const src = variant === 'small' ? '/logo-small.jpeg' : '/logo-big.jpeg';
-  
+  const src = variant === 'small' ? '/logo-small.png' : '/logo-big.png';
+
   return (
     <img
       src={src}

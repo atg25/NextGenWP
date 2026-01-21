@@ -26,7 +26,6 @@ export default function Contact() {
     // TODO: Replace with actual form submission logic (Formspree, Netlify Forms, etc.)
     // Simulating submission for now
     setTimeout(() => {
-      console.log('Form submitted:', formData);
       setStatus('success');
       setFormData({ name: '', email: '', phone: '', message: '' });
 

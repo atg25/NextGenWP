@@ -1,21 +1,16 @@
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import {
+  motion,
+  useScroll,
+  useTransform,
+  AnimatePresence,
+} from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Logo from './Logo';
 
 export default function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { scrollY } = useScroll();
   const opacity = useTransform(scrollY, [0, 100], [0, 1]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -43,7 +38,7 @@ export default function Navigation() {
   ) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
-    
+
     if (href === '#') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
@@ -56,19 +51,20 @@ export default function Navigation() {
     <>
       <motion.nav
         style={{ opacity }}
-        className={`fixed left-0 right-0 top-0 z-50 transition-colors duration-300 ${
-          isScrolled ? 'bg-warm-white/95 backdrop-blur-sm' : 'bg-transparent'
-        }`}
+        className="fixed left-0 right-0 top-0 z-50 bg-[#fdfbf7] transition-shadow duration-300"
       >
-        <div className="mx-auto max-w-7xl px-8 py-6 md:px-16 lg:px-24">
+        <div className="px-8 py-6 lg:px-16 xl:px-24">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <a
               href="#"
               onClick={e => handleClick(e, '#')}
-              className="block"
+              className="flex items-center gap-3"
             >
               <Logo variant="small" className="h-8 w-auto md:h-10" />
+              <span className="font-serif text-xl font-light tracking-tight text-charcoal md:text-2xl">
+                NewGen <span className="italic">Wallcovering</span>
+              </span>
             </a>
 
             {/* Desktop Nav */}

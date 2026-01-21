@@ -22,7 +22,7 @@ export default function Hero() {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="mb-6 inline-block border-l-2 border-accent pl-4 text-sm uppercase tracking-widest text-accent"
           >
-            New Gen Wallcovering
+            NewGen Wallcovering
           </motion.div>
 
           <motion.h1
@@ -33,7 +33,7 @@ export default function Hero() {
           >
             Precision Installed
             <br />
-            <span className="italic">Wallpaper</span>
+            <span className="italic">Wallcovering</span>
           </motion.h1>
 
           <motion.p
@@ -42,8 +42,8 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="mt-8 max-w-xl text-xl leading-relaxed text-charcoal/70"
           >
-            Modern wallpaper installation for homes that value craft, material
-            quality, and lasting design.
+            Modern wallcovering installation for homes that value craft,
+            material quality, and lasting design.
           </motion.p>
 
           <motion.div
@@ -54,9 +54,11 @@ export default function Hero() {
           >
             <a
               href="#contact"
-              onClick={(e) => {
+              onClick={e => {
                 e.preventDefault();
-                document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+                document
+                  .querySelector('#contact')
+                  ?.scrollIntoView({ behavior: 'smooth' });
               }}
               className="group relative inline-flex items-center gap-2 overflow-hidden bg-accent px-10 py-4 text-sm font-medium uppercase tracking-wider text-warm-white transition-all duration-300 hover:gap-4"
             >
@@ -78,9 +80,11 @@ export default function Hero() {
 
             <a
               href="#work"
-              onClick={(e) => {
+              onClick={e => {
                 e.preventDefault();
-                document.querySelector('#work')?.scrollIntoView({ behavior: 'smooth' });
+                document
+                  .querySelector('#work')
+                  ?.scrollIntoView({ behavior: 'smooth' });
               }}
               className="text-sm uppercase tracking-wider text-charcoal/60 transition-colors hover:text-accent"
             >
