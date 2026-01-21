@@ -11,26 +11,26 @@ export default function SelectedWork() {
     {
       id: 1,
       title: 'Modern Geometric Pattern',
-      image: '/wallpapers/44FA6DFC-AA77-4A2D-BB48-1FD44A549151_1_102_o.jpeg',
+      image: '/wallpapers/44FA6DFC-AA77-4A2D-BB48-1FD44A549151_1_102_o.webp',
       description:
         'Precise pattern matching across floor-to-ceiling installation',
     },
     {
       id: 2,
       title: 'Textured Linen',
-      image: '/wallpapers/9BEFABEF-61D5-4755-94CF-20F4E752214B_1_102_o.jpeg',
+      image: '/wallpapers/9BEFABEF-61D5-4755-94CF-20F4E752214B_1_102_o.webp',
       description: 'Clean seams on high-texture material',
     },
     {
       id: 3,
       title: 'Classic Damask',
-      image: '/wallpapers/D7DDF697-D904-4AD3-839B-19C335BCF7CB_1_102_o.jpeg',
+      image: '/wallpapers/D7DDF697-D904-4AD3-839B-19C335BCF7CB_1_102_o.webp',
       description: 'Traditional pattern with modern precision',
     },
     {
       id: 4,
       title: 'Contemporary Abstract',
-      image: '/wallpapers/E65DEDFB-55A3-4B6D-AB7D-57B123D3419C_1_102_o.jpeg',
+      image: '/wallpapers/E65DEDFB-55A3-4B6D-AB7D-57B123D3419C_1_102_o.webp',
       description: 'Complex alignment requiring expert installation',
     },
   ];

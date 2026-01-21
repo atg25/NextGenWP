@@ -11,7 +11,7 @@ export default function Materials() {
     {
       id: 1,
       name: 'Traditional Paper',
-      image: '/wallpapers/1D170195-22DE-4D2B-8B7C-2A44F0A4C0C1_1_105_c.jpeg',
+      image: '/wallpapers/1D170195-22DE-4D2B-8B7C-2A44F0A4C0C1_1_105_c.webp',
       description:
         'Classic wallpaper with rich texture and depth. Best for low-moisture areas.',
       notes: ['Requires careful handling', 'Not washable', 'Beautiful finish'],
@@ -19,7 +19,7 @@ export default function Materials() {
     {
       id: 2,
       name: 'Vinyl & Washable',
-      image: '/wallpapers/528FA067-29DE-4659-8513-718D31D667D4_1_105_c.jpeg',
+      image: '/wallpapers/528FA067-29DE-4659-8513-718D31D667D4_1_105_c.webp',
       description:
         'Durable, moisture-resistant option ideal for high-traffic areas and kitchens.',
       notes: ['Easy to clean', 'Long-lasting', 'Great for families'],
@@ -27,7 +27,7 @@ export default function Materials() {
     {
       id: 3,
       name: 'Textured & Fabric',
-      image: '/wallpapers/6F18D709-E8E5-4FFA-B40D-9FCDD6C3DF18_1_105_c.jpeg',
+      image: '/wallpapers/6F18D709-E8E5-4FFA-B40D-9FCDD6C3DF18_1_105_c.webp',
       description:
         'Premium materials with tactile depth, adding dimension and sophistication.',
       notes: [
@@ -39,7 +39,7 @@ export default function Materials() {
     {
       id: 4,
       name: 'Peel & Stick',
-      image: '/wallpapers/CD78190C-1261-4CBC-A629-0C96A59A6412_1_102_o.jpeg',
+      image: '/wallpapers/CD78190C-1261-4CBC-A629-0C96A59A6412_1_102_o.webp',
       description:
         'Temporary or rental-friendly option with easy application and removal.',
       notes: ['Removable', 'DIY-friendly', 'Limited longevity'],

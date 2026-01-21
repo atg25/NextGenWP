@@ -23,15 +23,32 @@ export default function Contact() {
     e.preventDefault();
     setStatus('submitting');
 
-    // TODO: Replace with actual form submission logic (Formspree, Netlify Forms, etc.)
-    // Simulating submission for now
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({ name: '', email: '', phone: '', message: '' });
+    try {
+      const response = await fetch('https://formspree.io/f/xaycrgja', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-      // Reset success message after 5 seconds
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', phone: '', message: '' });
+
+        // Reset success message after 5 seconds
+        setTimeout(() => setStatus('idle'), 5000);
+      } else {
+        setStatus('error');
+        // Reset error message after 5 seconds
+        setTimeout(() => setStatus('idle'), 5000);
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setStatus('error');
+      // Reset error message after 5 seconds
       setTimeout(() => setStatus('idle'), 5000);
-    }, 1000);
+    }
   };
 
   const handleChange = (

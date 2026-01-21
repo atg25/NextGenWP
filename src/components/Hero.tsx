@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   const wallpaperImages = [
-    '/wallpapers/0A974DC4-D203-4F61-8FB9-AC9DBB889DDE_1_102_o.jpeg',
-    '/wallpapers/3961CB94-3CDC-452E-9E8F-E1E9608E8481_1_102_o.jpeg',
-    '/wallpapers/5250FD5B-A2B3-449D-88DD-09ABEA0CCF64_1_102_o.jpeg',
-    '/wallpapers/C8BD5D6A-9575-4066-B893-0AD0D3EEE5A3_1_102_o.jpeg',
+    '/wallpapers/0A974DC4-D203-4F61-8FB9-AC9DBB889DDE_1_102_o.webp',
+    '/wallpapers/3961CB94-3CDC-452E-9E8F-E1E9608E8481_1_102_o.webp',
+    '/wallpapers/5250FD5B-A2B3-449D-88DD-09ABEA0CCF64_1_102_o.webp',
+    '/wallpapers/C8BD5D6A-9575-4066-B893-0AD0D3EEE5A3_1_102_o.webp',
   ];
 
   return (
