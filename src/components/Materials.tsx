@@ -13,21 +13,23 @@ export default function Materials() {
       name: 'Traditional Paper',
       image: '/wallpapers/1D170195-22DE-4D2B-8B7C-2A44F0A4C0C1_1_105_c.webp',
       description:
-        'Classic wallpaper with rich texture and depth. Best for low-moisture areas.',
-      notes: ['Requires careful handling', 'Not washable', 'Beautiful finish'],
+        'Classic wallpaper with rich texture and depth. Washable surface for easy maintenance.',
+      notes: ['Washable surface', 'Gentle cleaning', 'Beautiful finish'],
+      washable: true,
     },
     {
       id: 2,
       name: 'Vinyl & Washable',
-      image: '/wallpapers/528FA067-29DE-4659-8513-718D31D667D4_1_105_c.webp',
+      image: '/wallpapers/CD78190C-1261-4CBC-A629-0C96A59A6412_1_102_o.webp',
       description:
         'Durable, moisture-resistant option ideal for high-traffic areas and kitchens.',
       notes: ['Easy to clean', 'Long-lasting', 'Great for families'],
+      washable: true,
     },
     {
       id: 3,
       name: 'Textured & Fabric',
-      image: '/wallpapers/6F18D709-E8E5-4FFA-B40D-9FCDD6C3DF18_1_105_c.webp',
+      image: '/wallpapers/0A974DC4-D203-4F61-8FB9-AC9DBB889DDE_1_102_o.webp',
       description:
         'Premium materials with tactile depth, adding dimension and sophistication.',
       notes: [
@@ -38,11 +40,11 @@ export default function Materials() {
     },
     {
       id: 4,
-      name: 'Peel & Stick',
-      image: '/wallpapers/CD78190C-1261-4CBC-A629-0C96A59A6412_1_102_o.webp',
+      name: 'Painting & Wallpaper Combo',
+      image: '/wallpapers/528FA067-29DE-4659-8513-718D31D667D4_1_105_c.webp',
       description:
-        'Temporary or rental-friendly option with easy application and removal.',
-      notes: ['Removable', 'DIY-friendly', 'Limited longevity'],
+        'Seamless integration of painted surfaces with wallpaper for a cohesive look.',
+      notes: ['Durable finish', 'Seamless integration', 'Expert installation'],
     },
   ];
 
@@ -60,7 +62,7 @@ export default function Materials() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="mb-16"
         >
-          <div className="mb-4 inline-block border-l-2 border-accent pl-4 text-sm uppercase tracking-widest text-accent">
+          <div className="mb-4 inline-block border-l-2 border-gold-rich pl-4 text-sm uppercase tracking-widest text-gold-rich">
             Materials
           </div>
           <h2 className="font-serif text-5xl font-light leading-tight tracking-tight text-charcoal md:text-6xl">
@@ -95,10 +97,20 @@ export default function Materials() {
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-charcoal/0 transition-colors duration-300 group-hover:bg-charcoal/5" />
+
+                {/* WASHABLE Badge */}
+                {material.washable && (
+                  <div className="absolute right-4 top-4 flex items-center gap-1.5 bg-gold-rich px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-navy-deep shadow-sm">
+                    <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Washable
+                  </div>
+                )}
               </div>
 
               {/* Content */}
-              <div className="flex flex-1 flex-col border-l-2 border-accent/20 p-6">
+              <div className="flex flex-1 flex-col border-l-2 border-gold-rich/20 p-6">
                 <h3 className="mb-3 font-serif text-xl font-light text-charcoal">
                   {material.name}
                 </h3>
@@ -113,7 +125,7 @@ export default function Materials() {
                       key={i}
                       className="flex items-start gap-2 text-xs text-charcoal/50"
                     >
-                      <span className="mt-1 h-1 w-1 flex-shrink-0 rounded-full bg-accent/50" />
+                      <span className="mt-1 h-1 w-1 flex-shrink-0 rounded-full bg-gold-rich/50" />
                       <span>{note}</span>
                     </li>
                   ))}
@@ -145,7 +157,7 @@ export default function Materials() {
                 .querySelector('#contact')
                 ?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="inline-block text-sm uppercase tracking-wider text-accent transition-colors hover:text-charcoal"
+            className="inline-block text-sm uppercase tracking-wider text-gold-rich transition-colors hover:text-navy-deep"
           >
             Let's Discuss →
           </a>

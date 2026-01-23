@@ -11,7 +11,7 @@ export default function SelectedWork() {
     {
       id: 1,
       title: 'Modern Geometric Pattern',
-      image: '/wallpapers/44FA6DFC-AA77-4A2D-BB48-1FD44A549151_1_102_o.webp',
+      image: '/wallpapers/D7DDF697-D904-4AD3-839B-19C335BCF7CB_1_102_o.webp',
       description:
         'Precise pattern matching across floor-to-ceiling installation',
     },
@@ -24,7 +24,7 @@ export default function SelectedWork() {
     {
       id: 3,
       title: 'Classic Damask',
-      image: '/wallpapers/D7DDF697-D904-4AD3-839B-19C335BCF7CB_1_102_o.webp',
+      image: '/wallpapers/5250FD5B-A2B3-449D-88DD-09ABEA0CCF64_1_102_o.webp',
       description: 'Traditional pattern with modern precision',
     },
     {
@@ -49,7 +49,7 @@ export default function SelectedWork() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="mb-16"
         >
-          <div className="mb-4 inline-block border-l-2 border-accent pl-4 text-sm uppercase tracking-widest text-accent">
+          <div className="mb-4 inline-block border-l-2 border-gold-rich pl-4 text-sm uppercase tracking-widest text-gold-rich">
             Selected Work
           </div>
           <h2 className="font-serif text-5xl font-light leading-tight tracking-tight text-charcoal md:text-6xl">
@@ -88,7 +88,7 @@ export default function SelectedWork() {
               </div>
 
               {/* Content */}
-              <div className="border-l-2 border-accent/20 p-6 transition-colors duration-300 group-hover:border-accent">
+              <div className="border-l-2 border-gold-rich/20 p-6 transition-colors duration-300 group-hover:border-gold-rich">
                 <h3 className="mb-2 font-serif text-2xl font-light text-charcoal">
                   {project.title}
                 </h3>
@@ -119,7 +119,7 @@ export default function SelectedWork() {
                 .querySelector('#contact')
                 ?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="inline-block text-sm uppercase tracking-wider text-charcoal/60 transition-colors hover:text-accent"
+            className="inline-block text-sm uppercase tracking-wider text-charcoal/60 transition-colors hover:text-gold-rich"
           >
             Discuss Your Project →
           </a>

@@ -57,12 +57,16 @@ export default function Process() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="mb-20"
         >
-          <div className="mb-4 inline-block border-l-2 border-accent pl-4 text-sm uppercase tracking-widest text-accent">
+          <div className="mb-4 inline-block border-l-2 border-gold-rich pl-4 text-sm uppercase tracking-widest text-gold-rich">
             Our Process
           </div>
           <h2 className="font-serif text-5xl font-light leading-tight tracking-tight text-charcoal md:text-6xl">
             From Start to Finish
           </h2>
+          <p className="mt-4 text-lg text-charcoal/70">
+            Whether wallcovering or paint, our approach stays the same:
+            precision, care, and quality.
+          </p>
         </motion.div>
 
         {/* Steps */}
@@ -81,7 +85,7 @@ export default function Process() {
             >
               {/* Number */}
               <div className="lg:col-span-2">
-                <div className="font-serif text-6xl font-light text-accent/30 md:text-7xl lg:text-8xl">
+                <div className="font-serif text-6xl font-light text-gold-rich/30 md:text-7xl lg:text-8xl">
                   {step.number}
                 </div>
               </div>
@@ -102,7 +106,7 @@ export default function Process() {
                       key={i}
                       className="flex items-start gap-3 text-sm text-charcoal/60"
                     >
-                      <span className="mt-1.5 h-1 w-1 rounded-full bg-accent" />
+                      <span className="mt-1.5 h-1 w-1 rounded-full bg-gold-rich" />
                       <span>{detail}</span>
                     </li>
                   ))}

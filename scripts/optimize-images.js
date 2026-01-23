@@ -27,9 +27,7 @@ async function optimizeImages() {
         const stats = fs.statSync(inputPath);
         const originalSize = (stats.size / 1024).toFixed(2);
 
-        await sharp(inputPath)
-          .webp({ quality: 80 })
-          .toFile(outputPath);
+        await sharp(inputPath).webp({ quality: 80 }).toFile(outputPath);
 
         const optimizedStats = fs.statSync(outputPath);
         const optimizedSize = (optimizedStats.size / 1024).toFixed(2);
@@ -38,9 +36,7 @@ async function optimizeImages() {
           100
         ).toFixed(2);
 
-        console.log(
-          `✓ ${file} → ${outputName}`
-        );
+        console.log(`✓ ${file} → ${outputName}`);
         console.log(
           `  Original: ${originalSize}KB → Optimized: ${optimizedSize}KB (${savings}% savings)`
         );

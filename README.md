@@ -1,36 +1,19 @@
-# NextGen Wallpaper
+# NextGen Wallcovering
 
-Modern, design-forward website for NextGen Wallpaper — a precision wallpaper installation service.
+Website for NextGen Wallcovering.
 
-## Tech Stack
+## Stack
 
-- **Vite** + **React** + **TypeScript**
-- **Tailwind CSS v4**
-- **Framer Motion** for animations
-- **ESLint** + **Prettier** for code quality
-- **Husky** + **lint-staged** for pre-commit hooks
-- **Commitlint** for conventional commits
+Vite 7.3, React 19, TypeScript 5.9, Tailwind CSS v4, Framer Motion
 
-## Development
+## Setup
 
 ```bash
 npm install
-npm run dev
-```
-
-Visit [http://localhost:5173](http://localhost:5173)
-
-## Build
-
-```bash
+npm run dev     # http://localhost:5173
 npm run build
-npm run preview
 ```
-
-## Design Brief
-
-See [docs/design-brief.md](docs/design-brief.md) for full project vision and design direction.
 
 ## Deployment
 
-Optimized for Vercel deployment. Connect your GitHub repo and deploy automatically.
+See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for Vercel deployment guide.

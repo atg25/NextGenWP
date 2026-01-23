@@ -21,11 +21,11 @@ export default function About() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="mb-12"
         >
-          <div className="mb-4 inline-block border-l-2 border-accent pl-4 text-sm uppercase tracking-widest text-accent">
+          <div className="mb-4 inline-block border-l-2 border-gold-rich pl-4 text-sm uppercase tracking-widest text-gold-rich">
             About
           </div>
           <h2 className="font-serif text-5xl font-light leading-tight tracking-tight text-charcoal md:text-6xl">
-            NewGen Wallcovering
+            NextGen Wallcovering
           </h2>
         </motion.div>
 
@@ -41,7 +41,7 @@ export default function About() {
           className="space-y-8 text-lg leading-relaxed text-charcoal/80"
         >
           <p>
-            NewGen Wallcovering began with a simple belief: that wallpaper
+            NextGen Wallcovering began with a simple belief: that wallpaper
             installation is a craft requiring precision, patience, and respect
             for materials.
           </p>
@@ -50,7 +50,8 @@ export default function About() {
             We specialize in modern wallpaper installation for homeowners who
             value quality over speed. Every project receives the same level of
             attention — careful surface preparation, exact pattern matching, and
-            meticulous finishing.
+            meticulous finishing. We also offer professional paint services for
+            those seeking a complementary or simpler refresh.
           </p>
 
           <p>
@@ -60,7 +61,7 @@ export default function About() {
             Honest communication. No shortcuts.
           </p>
 
-          <p className="border-l-2 border-accent pl-6 font-serif text-xl italic text-charcoal/90">
+          <p className="border-l-2 border-gold-rich pl-6 font-serif text-xl italic text-charcoal/90">
             We let the quality of our installations speak for itself.
           </p>
         </motion.div>
@@ -78,7 +79,7 @@ export default function About() {
         >
           <div>
             <div className="mb-2 font-serif text-3xl font-light text-accent">
-              10+
+              5+
             </div>
             <div className="text-sm uppercase tracking-wider text-charcoal/50">
               Years Experience
@@ -86,7 +87,7 @@ export default function About() {
           </div>
           <div>
             <div className="mb-2 font-serif text-3xl font-light text-accent">
-              200+
+              50+
             </div>
             <div className="text-sm uppercase tracking-wider text-charcoal/50">
               Projects Completed

@@ -1,5 +1,21 @@
 @import 'tailwindcss';
 
+@theme {
+  /* Primary Colors (Readable base) */
+  --color-warm-white: #faf8f5;
+  --color-charcoal: #2a2a2a;
+
+  /* Navy/Gold Accents (Client requested) */
+  --color-navy-deep: #1a2332;
+  --color-gold-rich: #8b6f3a;
+  --color-gold-accent: #b8994f;
+  --color-accent: #2d5450;
+
+  /* Fonts */
+  --font-family-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-family-sans: Inter, system-ui, sans-serif;
+}
+
 /* Respect user motion preferences */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -14,7 +30,8 @@
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  color: #2a2a2a;
+  color: #2a2a2a; /* Charcoal text */
+  background-color: #faf8f5; /* Warm white background */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -30,7 +47,7 @@ body {
 }
 
 .paper-texture {
-  background-color: #fdfbf7;
+  background-color: #fdfbf7; /* Warm white */
   background-image:
     radial-gradient(at 20% 30%, rgba(222, 184, 135, 0.05) 0px, transparent 50%),
     radial-gradient(at 80% 70%, rgba(205, 164, 120, 0.04) 0px, transparent 50%),

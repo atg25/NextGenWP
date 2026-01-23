@@ -44,7 +44,9 @@ export default function Contact() {
         setTimeout(() => setStatus('idle'), 5000);
       }
     } catch (error) {
-      console.error('Form submission error:', error);
+      if (import.meta.env.DEV) {
+        console.error('Form submission error:', error);
+      }
       setStatus('error');
       // Reset error message after 5 seconds
       setTimeout(() => setStatus('idle'), 5000);
@@ -74,16 +76,16 @@ export default function Contact() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="mb-16 text-center"
         >
-          <div className="mb-4 inline-block border-l-2 border-accent pl-4 text-sm uppercase tracking-widest text-accent">
+          <div className="mb-4 inline-block border-l-2 border-gold-rich pl-4 text-sm uppercase tracking-widest text-gold-rich">
             Get in Touch
           </div>
           <h2 className="font-serif text-5xl font-light leading-tight tracking-tight text-charcoal md:text-6xl">
-            Let's Discuss <br />
-            <span className="italic">Your Project</span>
+            Request Your <br />
+            <span className="italic">Free Estimate</span>
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-charcoal/70">
-            Share your vision, and we'll provide honest guidance on how to bring
-            it to life.
+            No obligation, no pressure. Honest pricing for wallcovering and
+            paint within 24 hours.
           </p>
         </motion.div>
 
@@ -103,7 +105,7 @@ export default function Contact() {
           <div>
             <label
               htmlFor="name"
-              className="mb-2 block text-sm uppercase tracking-wider text-charcoal/60"
+              className="mb-2 block text-sm uppercase tracking-wider text-charcoal/80"
             >
               Name *
             </label>
@@ -114,7 +116,7 @@ export default function Contact() {
               required
               value={formData.name}
               onChange={handleChange}
-              className="w-full border-b-2 border-charcoal/20 bg-transparent px-0 py-3 text-charcoal transition-colors focus:border-accent focus:outline-none"
+              className="w-full border-b-2 border-charcoal/20 bg-transparent px-0 py-3 text-charcoal transition-colors focus:border-gold-rich focus:outline-none"
             />
           </div>
 
@@ -123,7 +125,7 @@ export default function Contact() {
             <div>
               <label
                 htmlFor="email"
-                className="mb-2 block text-sm uppercase tracking-wider text-charcoal/60"
+                className="mb-2 block text-sm uppercase tracking-wider text-charcoal/80"
               >
                 Email *
               </label>
@@ -134,13 +136,13 @@ export default function Contact() {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full border-b-2 border-charcoal/20 bg-transparent px-0 py-3 text-charcoal transition-colors focus:border-accent focus:outline-none"
+                className="w-full border-b-2 border-charcoal/20 bg-transparent px-0 py-3 text-charcoal transition-colors focus:border-gold-rich focus:outline-none"
               />
             </div>
             <div>
               <label
                 htmlFor="phone"
-                className="mb-2 block text-sm uppercase tracking-wider text-charcoal/60"
+                className="mb-2 block text-sm uppercase tracking-wider text-charcoal/80"
               >
                 Phone
               </label>
@@ -150,7 +152,7 @@ export default function Contact() {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full border-b-2 border-charcoal/20 bg-transparent px-0 py-3 text-charcoal transition-colors focus:border-accent focus:outline-none"
+                className="w-full border-b-2 border-charcoal/20 bg-transparent px-0 py-3 text-charcoal transition-colors focus:border-gold-rich focus:outline-none"
               />
             </div>
           </div>
@@ -159,7 +161,7 @@ export default function Contact() {
           <div>
             <label
               htmlFor="message"
-              className="mb-2 block text-sm uppercase tracking-wider text-charcoal/60"
+              className="mb-2 block text-sm uppercase tracking-wider text-charcoal/80"
             >
               Project Details *
             </label>
@@ -170,7 +172,7 @@ export default function Contact() {
               rows={6}
               value={formData.message}
               onChange={handleChange}
-              className="w-full resize-none border-b-2 border-charcoal/20 bg-transparent px-0 py-3 text-charcoal transition-colors focus:border-accent focus:outline-none"
+              className="w-full resize-none border-b-2 border-charcoal/20 bg-transparent px-0 py-3 text-charcoal transition-colors focus:border-gold-rich focus:outline-none"
               placeholder="Tell us about your space, design goals, and timeline..."
             />
           </div>
@@ -180,7 +182,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === 'submitting'}
-              className="group relative inline-flex items-center gap-2 overflow-hidden bg-accent px-12 py-4 text-sm font-medium uppercase tracking-wider text-warm-white transition-all duration-300 hover:gap-4 disabled:opacity-50"
+              className="group relative inline-flex items-center gap-2 overflow-hidden bg-gold-rich px-12 py-4 text-sm font-medium uppercase tracking-wider text-navy-deep transition-all duration-300 hover:gap-4 hover:bg-gold-accent disabled:opacity-50"
             >
               <span>
                 {status === 'submitting' ? 'Sending...' : 'Send Message'}
@@ -204,7 +206,7 @@ export default function Contact() {
 
             {/* Success Message */}
             {status === 'success' && (
-              <p className="mt-4 text-sm text-accent">
+              <p className="mt-4 text-sm text-gold-rich">
                 Thank you! We'll be in touch soon.
               </p>
             )}
@@ -228,10 +230,19 @@ export default function Contact() {
           delay: 0.6,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="mx-auto mt-24 max-w-4xl border-t border-charcoal/10 pt-12 text-center text-sm text-charcoal/50"
+        className="mx-auto mt-24 max-w-4xl space-y-4 border-t border-charcoal/10 pt-12 text-center text-sm text-charcoal/50"
       >
+        <div className="space-y-2">
+          <p className="text-base text-charcoal/70">
+            <a
+              href="tel:+1234567890"
+              className="hover:text-gold-rich transition-colors"
+            ></a>
+          </p>
+          <p className="text-xs">Serving South Jersey & Surrounding Areas</p>
+        </div>
         <p>
-          © {new Date().getFullYear()} NewGen Wallcovering. Precision
+          © {new Date().getFullYear()} NextGen Wallcovering. Precision
           installation for modern homes.
         </p>
       </motion.div>

@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-screen w-full flex-col overflow-hidden bg-warm-white lg:flex-row">
       {/* Left Content Section */}
-      <div className="relative z-10 flex w-full flex-col justify-center px-8 py-20 lg:w-1/2 lg:px-16 xl:px-24">
+      <div className="relative z-10 flex w-full flex-col justify-center px-8 py-32 pt-28 lg:w-1/2 lg:px-16 lg:py-20 xl:px-24">
         {/* Background for left side */}
         <div className="paper-texture absolute inset-0" />
 
@@ -20,9 +20,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="mb-6 inline-block border-l-2 border-accent pl-4 text-sm uppercase tracking-widest text-accent"
+            className="mb-6 inline-block border-l-2 border-gold-rich pl-4 text-sm uppercase tracking-widest text-gold-rich"
           >
-            NewGen Wallcovering
+            NextGen Wallcovering
           </motion.div>
 
           <motion.h1
@@ -31,9 +31,9 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="font-serif text-6xl font-light leading-[1.1] tracking-tight text-charcoal md:text-7xl lg:text-7xl xl:text-8xl"
           >
-            Precision Installed
+            Precision
             <br />
-            <span className="italic">Wallcovering</span>
+            <span className="italic">Wallcovering & Painting</span>
           </motion.h1>
 
           <motion.p
@@ -60,9 +60,9 @@ export default function Hero() {
                   .querySelector('#contact')
                   ?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="group relative inline-flex items-center gap-2 overflow-hidden bg-accent px-10 py-4 text-sm font-medium uppercase tracking-wider text-warm-white transition-all duration-300 hover:gap-4"
+              className="group relative inline-flex items-center gap-2 overflow-hidden bg-gold-rich px-10 py-4 text-sm font-medium uppercase tracking-wider text-navy-deep transition-all duration-300 hover:gap-4 hover:bg-gold-accent"
             >
-              <span>Request Quote</span>
+              <span>Get Your Free Estimate</span>
               <svg
                 className="h-4 w-4 transition-transform group-hover:translate-x-1"
                 fill="none"
@@ -86,7 +86,7 @@ export default function Hero() {
                   .querySelector('#work')
                   ?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="text-sm uppercase tracking-wider text-charcoal/60 transition-colors hover:text-accent"
+              className="text-sm uppercase tracking-wider text-charcoal/70 transition-colors hover:text-gold-rich hover:underline"
             >
               View Work
             </a>
