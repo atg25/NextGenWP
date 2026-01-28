@@ -233,18 +233,25 @@ export default function Contact() {
         className="mx-auto mt-24 max-w-4xl space-y-4 border-t border-charcoal/10 pt-12 text-center text-sm text-charcoal/50"
       >
         <div className="space-y-2">
-          <p className="text-base text-charcoal/70">
-            <a
-              href="tel:+1234567890"
-              className="hover:text-gold-rich transition-colors"
-            ></a>
-          </p>
           <p className="text-xs">Serving South Jersey & Surrounding Areas</p>
         </div>
         <p>
           © {new Date().getFullYear()} NextGen Wallcovering. Precision
           installation for modern homes.
         </p>
+        <div className="space-y-2">
+          <p className="text-xs">
+            Webpage Designed and Developed by{' '}
+            <a
+              href="https://agmedia.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold-rich transition-colors hover:text-gold-accent"
+            >
+              AGmedia
+            </a>
+          </p>
+        </div>
       </motion.div>
     </section>
   );

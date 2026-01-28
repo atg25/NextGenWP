@@ -11,26 +11,26 @@ export default function SelectedWork() {
     {
       id: 1,
       title: 'Modern Geometric Pattern',
-      image: '/wallpapers/D7DDF697-D904-4AD3-839B-19C335BCF7CB_1_102_o.webp',
+      image: '/wallpapers/mosaic.webp',
       description:
         'Precise pattern matching across floor-to-ceiling installation',
     },
     {
       id: 2,
       title: 'Textured Linen',
-      image: '/wallpapers/9BEFABEF-61D5-4755-94CF-20F4E752214B_1_102_o.webp',
+      image: '/wallpapers/sittingroom.webp',
       description: 'Clean seams on high-texture material',
     },
     {
       id: 3,
       title: 'Classic Damask',
-      image: '/wallpapers/5250FD5B-A2B3-449D-88DD-09ABEA0CCF64_1_102_o.webp',
+      image: '/wallpapers/octopus.webp',
       description: 'Traditional pattern with modern precision',
     },
     {
       id: 4,
       title: 'Contemporary Abstract',
-      image: '/wallpapers/E65DEDFB-55A3-4B6D-AB7D-57B123D3419C_1_102_o.webp',
+      image: '/wallpapers/abstract.webp',
       description: 'Complex alignment requiring expert installation',
     },
   ];
@@ -81,7 +81,7 @@ export default function SelectedWork() {
                   src={project.image}
                   alt={project.title}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
                 {/* Subtle overlay */}
                 <div className="absolute inset-0 bg-charcoal/0 transition-colors duration-300 group-hover:bg-charcoal/5" />

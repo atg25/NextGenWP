@@ -51,7 +51,7 @@ export default function About() {
             value quality over speed. Every project receives the same level of
             attention — careful surface preparation, exact pattern matching, and
             meticulous finishing. We also offer professional paint services for
-            those seeking a complementary or simpler refresh.
+            those seeking something to complement their wallpaper.
           </p>
 
           <p>
@@ -79,18 +79,10 @@ export default function About() {
         >
           <div>
             <div className="mb-2 font-serif text-3xl font-light text-accent">
-              5+
+              10+
             </div>
             <div className="text-sm uppercase tracking-wider text-charcoal/50">
               Years Experience
-            </div>
-          </div>
-          <div>
-            <div className="mb-2 font-serif text-3xl font-light text-accent">
-              50+
-            </div>
-            <div className="text-sm uppercase tracking-wider text-charcoal/50">
-              Projects Completed
             </div>
           </div>
           <div>

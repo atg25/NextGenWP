@@ -11,7 +11,7 @@ export default function Materials() {
     {
       id: 1,
       name: 'Traditional Paper',
-      image: '/wallpapers/1D170195-22DE-4D2B-8B7C-2A44F0A4C0C1_1_105_c.webp',
+      image: '/wallpapers/trees-bathroom.webp',
       description:
         'Classic wallpaper with rich texture and depth. Washable surface for easy maintenance.',
       notes: ['Washable surface', 'Gentle cleaning', 'Beautiful finish'],
@@ -20,7 +20,7 @@ export default function Materials() {
     {
       id: 2,
       name: 'Vinyl & Washable',
-      image: '/wallpapers/CD78190C-1261-4CBC-A629-0C96A59A6412_1_102_o.webp',
+      image: '/wallpapers/shower.webp',
       description:
         'Durable, moisture-resistant option ideal for high-traffic areas and kitchens.',
       notes: ['Easy to clean', 'Long-lasting', 'Great for families'],
@@ -29,7 +29,7 @@ export default function Materials() {
     {
       id: 3,
       name: 'Textured & Fabric',
-      image: '/wallpapers/0A974DC4-D203-4F61-8FB9-AC9DBB889DDE_1_102_o.webp',
+      image: '/wallpapers/greatroom.webp',
       description:
         'Premium materials with tactile depth, adding dimension and sophistication.',
       notes: [
@@ -41,7 +41,7 @@ export default function Materials() {
     {
       id: 4,
       name: 'Painting & Wallpaper Combo',
-      image: '/wallpapers/528FA067-29DE-4659-8513-718D31D667D4_1_105_c.webp',
+      image: '/wallpapers/bedroom.webp',
       description:
         'Seamless integration of painted surfaces with wallpaper for a cohesive look.',
       notes: ['Durable finish', 'Seamless integration', 'Expert installation'],
