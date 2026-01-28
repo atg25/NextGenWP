@@ -236,7 +236,7 @@ export default function Contact() {
           <p className="text-xs">Serving South Jersey & Surrounding Areas</p>
         </div>
         <p>
-          © {new Date().getFullYear()} NextGen Wallcovering. Precision
+          © {new Date().getFullYear()} NextGen Wallcovering by DJ Crooker. Precision
           installation for modern homes.
         </p>
         <div className="space-y-2">
