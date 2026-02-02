@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [ref, inView] = useInView({
@@ -19,11 +20,50 @@ export default function Contact() {
     'idle' | 'submitting' | 'success' | 'error'
   >('idle');
 
+  const emailjsServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID as
+    | string
+    | undefined;
+  const emailjsTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as
+    | string
+    | undefined;
+  const emailjsPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as
+    | string
+    | undefined;
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('submitting');
 
     try {
+      const hasEmailJsConfig = Boolean(
+        emailjsServiceId && emailjsTemplateId && emailjsPublicKey
+      );
+
+      if (hasEmailJsConfig) {
+        await emailjs.send(
+          emailjsServiceId!,
+          emailjsTemplateId!,
+          {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone || '—',
+            message: formData.message,
+            from_name: formData.name,
+            from_email: formData.email,
+            reply_to: formData.email,
+          },
+          {
+            publicKey: emailjsPublicKey!,
+          }
+        );
+
+        setStatus('success');
+        setFormData({ name: '', email: '', phone: '', message: '' });
+        setTimeout(() => setStatus('idle'), 5000);
+        return;
+      }
+
+      // Fallback: keep Formspree working until EmailJS env vars are configured.
       const response = await fetch('https://formspree.io/f/xaycrgja', {
         method: 'POST',
         headers: {
@@ -32,17 +72,13 @@ export default function Contact() {
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
-        setStatus('success');
-        setFormData({ name: '', email: '', phone: '', message: '' });
-
-        // Reset success message after 5 seconds
-        setTimeout(() => setStatus('idle'), 5000);
-      } else {
-        setStatus('error');
-        // Reset error message after 5 seconds
-        setTimeout(() => setStatus('idle'), 5000);
+      if (!response.ok) {
+        throw new Error('Form submission failed');
       }
+
+      setStatus('success');
+      setFormData({ name: '', email: '', phone: '', message: '' });
+      setTimeout(() => setStatus('idle'), 5000);
     } catch (error) {
       if (import.meta.env.DEV) {
         console.error('Form submission error:', error);
@@ -236,8 +272,8 @@ export default function Contact() {
           <p className="text-xs">Serving South Jersey & Surrounding Areas</p>
         </div>
         <p>
-          © {new Date().getFullYear()} NextGen Wallcovering by DJ Crooker. Precision
-          installation for modern homes.
+          © {new Date().getFullYear()} NextGen Wallcovering by DJ Crooker.
+          Precision installation for modern homes.
         </p>
         <div className="space-y-2">
           <p className="text-xs">
